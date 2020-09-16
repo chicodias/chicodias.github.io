@@ -1,0 +1,12 @@
+name: "my-website"
+navbar:
+  title: "Francisco Miranda"
+  left:
+    - text: "Sobre mim"
+      href: index.html
+    - text: "Desenvolvimento"
+      href: r.html
+    - text: "Artigos"
+      href: artigos.html
+    - text: "Repositórios"
+      href: repos.html
