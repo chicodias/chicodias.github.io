@@ -1,0 +1,32 @@
+---
+title: "Sobre Mim"
+---
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+ </style>
+<div class="col2">
+![](IMG_9496.jpg)
+
+Olá, meu nome é Francisco, tenho 27 anos e atualmente sou um estudante do Bacharelado em Estatística e Ciência de Dados no ICMC-USP.
+
+Em meu cotidiano acadêmico e profissional tenho sido um frequente utilizador do R, minha linguagem de programação principal, na qual desenvolvo ferramentas de *visualização, análise e predição* de dados com o auxílio de técnicas estatísticas.
+
+Esta página contém alguns dos projetos que eu criei, com o auxílio de pacotes como o *tidyverse* para importação e manipulação de dados, *ggplot, plot_ly e leaflet* para a criação de visualizações. Procurei aqui ilustrar diversas etapas do pipeline de um Data Scientist que fui aprendendo ao longo de minha graduação. 
+
+Sinta-se à vontade para reproduzir, modificar e redistribuir os códigos presentes aqui.
+
+Caso deseje, pode me contactar através de meu linkedin: https://www.linkedin.com/in/chicodias/
+
+Este site foi gerado com auxílio do *rmarkdown* e atualizado em Setembro de 2020.
+</div>
+
+
+***
+
+
+##### Palavras-chave: "visualização de dados", "análise exploratória", "regressão linear", "regressão logística","cálculo numérico","inferência bayesiana"
