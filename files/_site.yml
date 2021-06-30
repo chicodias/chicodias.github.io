@@ -4,7 +4,9 @@ navbar:
   left:
     - text: "Sobre mim"
       href: index.html
-    - text: "Desenvolvimento"
+    - text: "Modelagem"
+      href: mdl.html
+    - text: "Visualização"
       href: r.html
     - text: "Artigos"
       href: artigos.html

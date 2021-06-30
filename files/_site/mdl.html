@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Modelagem</title>
+
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.9.3/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Francisco Miranda</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Sobre mim</a>
+</li>
+<li>
+  <a href="mdl.html">Modelagem</a>
+</li>
+<li>
+  <a href="r.html">Visualização</a>
+</li>
+<li>
+  <a href="artigos.html">Artigos</a>
+</li>
+<li>
+  <a href="repos.html">Repositórios</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Modelagem</h1>
+
+</div>
+
+
+<hr />
+<div id="previsão-da-disponibilidade-de-leitos-hospitalares" class="section level2">
+<h2>Previsão da disponibilidade de leitos hospitalares</h2>
+<p>Através da previsão de casos utilizando o modelo de Redes Neurais, calculamos a previsão de leitos disponíveis para as Diretorias Regionais de Saúde do Estado de SP.</p>
+<p>Disponível em <a href="https://predict-icmc.shinyapps.io/covid-19" class="uri">https://predict-icmc.shinyapps.io/covid-19</a></p>
+<div class="figure">
+<img src="img/drs.png" alt="" />
+<p class="caption">Previsão de ocupação de leitos para a DRS Grande SP</p>
+</div>
+<hr />
+</div>
+<div id="fatores-de-risco-do-covid-19" class="section level2">
+<h2>Fatores de risco do covid-19</h2>
+<p>Neste trabalho, realizamos um levantamento dos fatores de risco para óbito em decorrência do covid-19 através do modelo de regressão logístico.</p>
+<div class="figure">
+<img src="img/log.png" alt="" />
+<p class="caption">Coeficientes do modelo</p>
+</div>
+<div class="figure">
+<img src="img/logdiag.jpeg" alt="" />
+<p class="caption">Diagnóstico do modelo</p>
+</div>
+<hr />
+</div>
+<div id="text-mining" class="section level2">
+<h2>Text Mining</h2>
+<div id="rede-de-personagens-da-trilogia-o-senhor-dos-anéis" class="section level3">
+<h3>Rede de personagens da trilogia O Senhor dos Anéis</h3>
+<p>Neste trabalho, geramos um dashboard de visualização interativa para nossos dados utilizando o modelo de Reconhecimento de Entidade Mencionada (NER).</p>
+<p>Disponível em <a href="https://github.com/chicodias/character-network" class="uri">https://github.com/chicodias/character-network</a></p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/chicodias/character-network/master/grafo-s.png" alt="" />
+<p class="caption">Grafo de Sentimentos do Livro 1</p>
+</div>
+<hr />
+</div>
+<div id="previsão-do-número-de-casos-de-covid-19-através-do-modelo-de-gompertz" class="section level3">
+<h3>Previsão do número de casos de Covid-19 através do modelo de Gompertz</h3>
+<p>Neste projeto, utilizamos o Modelo de Gompertz para prever o “achatamento da curva” de casos confirmados e óbitos decorrentes do Covid-19 no Brasil.</p>
+<div id="htmlwidget-a5579c478f50842e15bb" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a5579c478f50842e15bb">{"x":{"data":[{"x":[173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202],"y":[235866,236163,237934,240115,241764,242589,246492,247403,247730,250171,252063,254146,256511,256511,257778,257949,260991,262570,265066,266232,267477,267767,267767,268347,270000,271505,272857,274173,274467,274740],"text":["tempo: 173<br />last_available_confirmed: 235866","tempo: 174<br />last_available_confirmed: 236163","tempo: 175<br />last_available_confirmed: 237934","tempo: 176<br />last_available_confirmed: 240115","tempo: 177<br />last_available_confirmed: 241764","tempo: 178<br />last_available_confirmed: 242589","tempo: 179<br />last_available_confirmed: 246492","tempo: 180<br />last_available_confirmed: 247403","tempo: 181<br />last_available_confirmed: 247730","tempo: 182<br />last_available_confirmed: 250171","tempo: 183<br />last_available_confirmed: 252063","tempo: 184<br />last_available_confirmed: 254146","tempo: 185<br />last_available_confirmed: 256511","tempo: 186<br />last_available_confirmed: 256511","tempo: 187<br />last_available_confirmed: 257778","tempo: 188<br />last_available_confirmed: 257949","tempo: 189<br />last_available_confirmed: 260991","tempo: 190<br />last_available_confirmed: 262570","tempo: 191<br />last_available_confirmed: 265066","tempo: 192<br />last_available_confirmed: 266232","tempo: 193<br />last_available_confirmed: 267477","tempo: 194<br />last_available_confirmed: 267767","tempo: 195<br />last_available_confirmed: 267767","tempo: 196<br />last_available_confirmed: 268347","tempo: 197<br />last_available_confirmed: 270000","tempo: 198<br />last_available_confirmed: 271505","tempo: 199<br />last_available_confirmed: 272857","tempo: 200<br />last_available_confirmed: 274173","tempo: 201<br />last_available_confirmed: 274467","tempo: 202<br />last_available_confirmed: 274740"],"type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"rgba(0,0,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[202,203,204,205,206,207,208,209,210,211,212],"y":[280039.979966746,281485.097325651,282913.285046085,284324.620823615,285719.186296791,287097.066875221,288458.351571287,289803.132835512,291131.506395588,292443.571099065,293739.428759715],"text":["x: 202<br />y: 280040.0<br />colour: red<br />alpha: 0.5","x: 203<br />y: 281485.1<br />colour: red<br />alpha: 0.5","x: 204<br />y: 282913.3<br />colour: red<br />alpha: 0.5","x: 205<br />y: 284324.6<br />colour: red<br />alpha: 0.5","x: 206<br />y: 285719.2<br />colour: red<br />alpha: 0.5","x: 207<br />y: 287097.1<br />colour: red<br />alpha: 0.5","x: 208<br />y: 288458.4<br />colour: red<br />alpha: 0.5","x: 209<br />y: 289803.1<br />colour: red<br />alpha: 0.5","x: 210<br />y: 291131.5<br />colour: red<br />alpha: 0.5","x: 211<br />y: 292443.6<br />colour: red<br />alpha: 0.5","x: 212<br />y: 293739.4<br />colour: red<br />alpha: 0.5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":0.55,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"red","legendgroup":"red","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":60.6392694063927},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Previsão de casos confirmados de COVID-19 em Sâo Paulo","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[171.05,213.95],"tickmode":"array","ticktext":["180","190","200","210"],"tickvals":[180,190,200,210],"categoryorder":"array","categoryarray":["180","190","200","210"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"tempo","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[232972.328562014,296633.100197701],"tickmode":"array","ticktext":["240000","260000","280000"],"tickvals":[240000,260000,280000],"categoryorder":"array","categoryarray":["240000","260000","280000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Total de casos confirmados","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":0.93503937007874},"annotations":[],"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false,"displayModeBar":false},"source":"A","attrs":{"b0801a8d1d3f":{"x":{},"y":{},"type":"scatter"},"b0806f673602":{"x":{},"y":{},"colour":{},"alpha":{}}},"cur_data":"b0801a8d1d3f","visdat":{"b0801a8d1d3f":["function (y) ","x"],"b0806f673602":["function (y) ","x"]},".hideLegend":true,"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<hr />
+</div>
+<div id="prevendo-o-sucesso-de-filmes-através-de-métodos-de-regressão-linear" class="section level3">
+<h3>Prevendo o sucesso de filmes através de métodos de Regressão Linear</h3>
+<p>Trabalho de conclusão do curso de Modelos de Regressão Linear, o qual utilizamos destes para prever o sucesso de alguns filmes com base nas variáveis que tínhamos em nosso conjunto de dados.</p>
+<p><img src="mdl_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Escolhendo uma das variáveis da amostra como parâmetro para o modelo de classificação</p>
+<hr />
+<p><img src="mdl_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Comportamento do modelo com a amostra de teste.</p>
+<hr />
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
