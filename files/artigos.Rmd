@@ -49,12 +49,3 @@ https://github.com/chicodias/numeric_calculus/raw/master/02-ep3.pdf
 
 ***
 
-### Full Bayesian Significance Test
-
-O Full Bayesian Significance Test (FBST) é um teste que pode ser realizado para, verificar se uma certa hipótese é
-válida ou não, usando apenas a probabilidade posterior e valores observados. Neste EP, verificamos se um certo fabricante de painéis de LED está sendo honesto quanto ao tempo médio de falha de seus produtos, em linguagem R com a biblioteca *nloptr*.
-
-https://github.com/chicodias/numeric_calculus/raw/master/03-ep5.pdf
-
-
-***

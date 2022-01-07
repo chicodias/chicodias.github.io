@@ -12,19 +12,16 @@ title: "Sobre Mim"
 <div class="col2">
 ![](IMG_9496.jpg)
 
-Olá, meu nome é Francisco, tenho 28 anos e atualmente sou um estudante do Bacharelado em Estatística e Ciência de Dados no ICMC-USP.
+Olá, meu nome é Francisco, tenho 28 anos e atualmente sou um estudante do Bacharelado em Estatística e Ciência de Dados no ICMC-USP. Em meu tempo livre gosto de sair com os amigos e família, jogar, viajar, fazer trilhas, acampar e entrar em contato com a natureza. Por último, mas não menos importante, meu maior hobby é tocar violão, em especial ritmos brasileiros, como samba e choro.
 
-Esta página contém alguns dos projetos que desenvolvi em meu cotidiano acadêmico e profissional, escritos principalmente nas linguagens `R`, `C` e `Python`, nas áreas de **modelos de regressão** (lineares e não-lineares), **processamento de linguagem natural** e **visualização e exploração de dados**.
+Esta página contém alguns dos projetos que desenvolvi em meu cotidiano acadêmico e profissional, escritos principalmente nas linguagens `R`, `C` e `Python`, nas áreas de **modelos de regressão**, **classificação**, **processamento de linguagem natural**, **visualização e exploração de dados**, entre outros.
 
-Procurei ilustrar as diversas etapas do pipeline de um Cientista de Dados, aprendidas ao longo de minha graduação. Sinta-se à vontade para reproduzir, modificar e redistribuir os códigos presentes aqui.
+Atualmente, sou bolsista no grupo de extensão PREDICT, onde venho atuando desde Maio de 2020. Minha linha de pesquisa são modelos de classificação de risco para o Covid-19. Além disso, adoro elaborar cursos e palestras, alguns dos quais disponíveis nesta página.
 
-Caso deseje, pode me contactar através de meu linkedin: https://www.linkedin.com/in/chicodias/
-
-Este site foi gerado com auxílio do *rmarkdown* e atualizado em Junho de 2021.
-</div>
-
+Caso deseje, pode entrar em contato comigo através do Linkedin: https://www.linkedin.com/in/chicodias/
 
 ***
 
+Este site foi gerado com auxílio do *rmarkdown* e atualizado em Janeiro de 2022.
+</div>
 
-##### Palavras-chave: "visualização de dados", "análise exploratória", "regressão linear", "regressão logística","cálculo numérico","processamento de linguagem natural", "python", "shiny", "rstats"
