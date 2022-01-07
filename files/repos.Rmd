@@ -1,54 +1,129 @@
 ---
-title: "Repositórios"
+title: "Some cool projects"
 ---
 ***
 
+# Python
+
+## Classificação
+
+### Titanic
+
+Notebook da competição do Kaggle que utiliza o conjunto de dados contendo informações dos passageiros do Titanic. O objetivo é classificar se determinado passageiro veio a óbito ou não, utilizando as informações fornecidas.
+
+https://github.com/chicodias/titanicKaggle/blob/master/titanic.ipynb
+
+![Regiões de decisão a partir de diferentes modelos](decision.png)
+
+***
+
+## NLP
+
+### Rede de personagens da trilogia O Senhor dos Anéis
+
+![](https://raw.githubusercontent.com/chicodias/character-network/master/grafo-s.png)
+
+
+Neste trabalho, geramos um dashboard de visualização interativa para as relações entre os personagens utilizando o modelo de Reconhecimento de Entidade Mencionada (NER).
+
+[![chicodias/character-network - GitHub](https://gh-card.dev/repos/chicodias/character-network.svg)](https://github.com/chicodias/character-network)
+
+
+***
+
+## R
+
+### Dashboard interativo do COVID-19
+
+![](https://github.com/predict-icmc/presentations/raw/master/siicusp/img/mapa-intera.png)
+
+Aplicação web em R shiny desenvolvida no âmbito do grupo de extensão PREDICT. Aqui, tive a oportunidade de trabalhar com dados geolocalizados, modelos de regressão em séries temporais e ferramentas de visualização computacional.
+
+
+[![predict-icmc/covid-shiny - GitHub](https://gh-card.dev/repos/predict-icmc/covid-shiny.svg)](https://github.com/predict-icmc/covid-shiny)
+
+***
+
+### Prevendo o sucesso de filmes com Regressão Linear Multivariada
+
+Trabalho de conclusão do curso de Modelos de Regressão Linear, o qual utilizamos destes para prever o sucesso de alguns filmes com base nas variáveis que tínhamos em nosso conjunto de dados. 
+
+```{r include=FALSE}
+#pkg loading
+library(tidyverse) # ggplot2, dplyr, etc
+library(GGally)
+```
+
+```{r message=FALSE,echo=FALSE}
+load("movies.Rdata")
+dt <- movies[complete.cases(movies),]%>% dplyr::select(title,audience_score, imdb_rating, genre, critics_score, critics_rating, audience_rating, best_pic_nom, best_pic_win, best_actor_win, best_actress_win, best_dir_win, top200_box,imdb_rating,imdb_num_votes)
+
+nums <- tibble(dt$audience_score,dt$critics_score, dt$imdb_rating, dt$imdb_num_votes)
+nums %>% ggpairs()
+```
+
+Escolhendo uma das variáveis da amostra como parâmetro para o gráfico.
+
+***
+
+
+```{r message=FALSE, echo = FALSE}
+set.seed(123)
+
+nsamples <- floor(0.90*nrow(dt))
+
+train_ind <- sample(seq_len(nrow(dt)), size = nsamples)
+train_90 <- dt[train_ind, ]
+test_10 <- dt[-train_ind, ]
+
+fit.p3 <- lm(formula = audience_score ~ imdb_rating + genre, data = train_90)
+
+prmovies <- test_10 %>% dplyr::select(title,imdb_rating, genre, critics_score)  
+
+
+predictions <- predict(fit.p3, prmovies[,-1], interval="prediction", level=0.95)
+test <- tibble(title = test_10$title,
+               audience_score = test_10$audience_score,
+               fit = predictions[,1],
+               lower = predictions[,2],
+               upper = predictions[,3],
+               imdb_rating = test_10$imdb_rating)
+
+test %>% ggplot(aes(x = imdb_rating, y = audience_score)) + geom_point() + geom_smooth(aes(x = imdb_rating, y = audience_score),method=lm, se=TRUE)
+```
+
+Comportamento do modelo com a amostra de teste.
+
+
+***
+
+***
+
+# C
+
 ![Fractal de Mandelbrot](mandel.png)
 
-### https://github.com/chicodias/mac110
 
-Exercícios-programas desenvolvidos em C no primeiro semestre de 2014 para a disciplina Introdução a Computação
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+ </style>
+<div class="col2">
 
-***
-
-### https://github.com/chicodias/mac122
-
-Exercícios-programas desenvolvidos em C no primeiro semestre de 2014 para a disciplina ALgoritmos e Estruturas de Dados
-
-***
-
-
-### https://github.com/predict-icmc/covid19
-
-Repositório de meu time com diversas ferramentas de extração, manipulação e apresentação de dados, com ênfase na pandemia do Covid-19. Aqui, tive a oportunidade de trabalhar com dados geolocalizados, modelos de regressão não lineares e ferramentas de visualização computacional.
-
-![](site.png)
+[![chicodias/avl-dictionary - GitHub](https://gh-card.dev/repos/chicodias/avl-dictionary.svg)](https://github.com/chicodias/avl-dictionary)
 
 ***
 
-### https://github.com/chicodias/chemicals
-
-Repositório com dashboard desenvolvido para uma empresa química. 
-
-![](chem.png)
+[![chicodias/convexhull-c - GitHub](https://gh-card.dev/repos/chicodias/convexhull-c.svg)](https://github.com/chicodias/convexhull-c)
 
 ***
 
-### https://github.com/chicodias/20-01
-
-Repositório com notas de classe e trabalhos realizados no primeiro semestre de 2020.
+[![chicodias/mac110 - GitHub](https://gh-card.dev/repos/chicodias/mac110.svg)](https://github.com/chicodias/mac110)
 
 ***
 
-### https://github.com/chicodias/20-02
-
-Repositório com notas de classe e trabalhos realizados no primeiro semestre de 2020.
-
-*** 
-
-### https://github.com/chicodias/newton
-
-Repositório de cálculo numérico
-
-*** 
-
+[![chicodias/mac122 - GitHub](https://gh-card.dev/repos/chicodias/mac122.svg)](https://github.com/chicodias/mac122)
+</div>

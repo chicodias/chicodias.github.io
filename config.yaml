@@ -4,10 +4,9 @@ navbar:
   left:
     - text: "Sobre mim"
       href: index.html
-    - text: "Projetos"
-      href: repos.html
-    - text: "Artigos"
-      href: artigos.html
     - text: "Minicursos/Palestras"
       href: minicursos.html
-    
+    - text: "Artigos"
+      href: artigos.html
+    - text: "Projetos Legais"
+      href: repos.html

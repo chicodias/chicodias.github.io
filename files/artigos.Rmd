@@ -1,6 +1,30 @@
 ---
-title: "Artigos Escritos"
+title: "Artigos"
 ---
+
+***
+
+# Inferência Bayesiana
+
+### Regressão Linear e Seleção de Variáveis em Alta Dimensionalidade 
+
+![](grafo.png)
+
+Neste relatório, apresentamos brevemente algumas técnicas de caracterização molecular de alta escala, para inferir a estrutura latente de expressões gênicas de acordo com polimorfismos de nucleotídeo único (SNPs), utilizando Modelos Hierárquicos de Regressão não-relacionada aparentemente esparsa (SSUR).
+
+
+https://github.com/chicodias/21-02/raw/main/SME0809-Bayesiana/MultReg_bayes/relatorio.pdf
+
+
+***
+
+# COVID-19
+
+### Visualização dos Impactos Sociais da COVID-19
+
+Apresentação de parte dos trabalhos desenvolvidos em 2020 pelo grupo de extensão PREDICT no 29º Simpósio Internacional de Iniciação Científica e Tecnológica da USP – SIICUSP 2021.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E-VLVbHkfPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ***
 
@@ -25,27 +49,6 @@ Nele, apresentamos um preve panorama de como podemos calcular soluções númeri
 https://github.com/chicodias/newton/raw/master/RP3%20-%20FRANCISCO%20E%20JULIA.pdf
 
 ![Gráfico que ilustra a obtenção da raíz de uma equação polinomial através do Método de Newton](graf2.png)
-
-***
-
-
-
-### Integrais pelo Metodo de Monte Carlo
-
-Este exercício programa, desenvolvido no primeiro semestre de 2017, foi projetado em R e teve como objetivo calcular integrais numericamente utilizando os métodos de Monte Carlo, Hit-Or-Miss, Importance Sampling, e função quadrática como variável de controle.
-
-https://github.com/chicodias/numeric_calculus/raw/master/01-ep2.pdf
-
-***
-
-### Cálculo de integrais usando o algoritmo de Metropolis-Hastings
-
-Este trabalho, desenvolvido no primeiro semestre de 2017, implementa o algoritmo de Metropolis-Hastings na linguagem R, um dos exemplos mais populares de um método de Monte Carlo via Cadeias de Markov (MCMC).
-
-https://github.com/chicodias/numeric_calculus/raw/master/02-ep3.pdf
-
-![Histogramas da distribuição gerada para cada número $n_0$ de iterações para inicialização do algoritmo de Metropolis-Hastings](n.jpg)
-
 
 ***
 

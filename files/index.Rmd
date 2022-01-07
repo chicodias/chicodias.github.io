@@ -12,13 +12,15 @@ title: "Sobre Mim"
 <div class="col2">
 ![](IMG_9496.jpg)
 
-Olá, meu nome é Francisco, tenho 28 anos e atualmente sou um estudante do Bacharelado em Estatística e Ciência de Dados no ICMC-USP. Em meu tempo livre gosto de sair com os amigos e família, jogar, viajar, fazer trilhas, acampar e entrar em contato com a natureza. Por último, mas não menos importante, meu maior hobby é tocar violão, em especial ritmos brasileiros, como samba e choro.
+Olá, meu nome é Francisco, tenho 28 anos e atualmente sou um estudante do Bacharelado em Estatística e Ciência de Dados no ICMC-USP.
 
-Esta página contém alguns dos projetos que desenvolvi em meu cotidiano acadêmico e profissional, escritos principalmente nas linguagens `R`, `C` e `Python`, nas áreas de **modelos de regressão**, **classificação**, **processamento de linguagem natural**, **visualização e exploração de dados**, entre outros.
+Em meu tempo livre gosto de sair com meus amigos e familiares, jogar, viajar, fazer trilhas e entrar em contato com a natureza. Por último, mas não menos importante, meu maior hobby é tocar violão, em especial ritmos brasileiros, como samba e choro.
 
-Atualmente, sou bolsista no grupo de extensão PREDICT, onde venho atuando desde Maio de 2020. Minha linha de pesquisa são modelos de classificação de risco para o Covid-19. Além disso, adoro elaborar cursos e palestras, alguns dos quais disponíveis nesta página.
+Esta página contém alguns dos projetos que desenvolvi em meu cotidiano acadêmico e profissional, escritos principalmente nas linguagens  `Python`, `R` e `C`, nas áreas de **modelos de regressão**, **classificação**, **processamento de linguagem natural**, **visualização e exploração de dados**, entre outros.
 
-Caso deseje, pode entrar em contato comigo através do Linkedin: https://www.linkedin.com/in/chicodias/
+Atualmente, sou bolsista no grupo de extensão PREDICT, onde venho atuando desde Maio de 2020. Minha linha de pesquisa é Modelos de Classificação de Risco para o Covid-19. Além disso, adoro elaborar cursos e palestras, alguns dos quais disponibilizei aqui.
+
+Como um bom entusiasta do conhecimento aberto, grande parte dos códigos está disponível em meu *Github*. Caso deseje, pode entrar em contato comigo através do Linkedin: https://www.linkedin.com/in/chicodias/
 
 ***
 
