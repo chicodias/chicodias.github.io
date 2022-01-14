@@ -3,13 +3,16 @@ title: "Minicursos e Palestras"
 ---
 ***
 
+
 ## Machine Learning no Pycaret com dados do Covid-19
 
-Minicurso de Modelos de Regressão e Séries Temporais oferecido através do grupo de extensão PREDICT, .
+Minicurso de Modelos de Classificação e Regressão em Séries Temporais oferecido através do grupo de extensão PREDICT.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nh-kSc7keJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Material do curso: https://predict-icmc.github.io/pycaret-covid19/
+
+[![chicodias/pycaret-covid19 - GitHub](https://gh-card.dev/repos/chicodias/pycaret-covid19.svg)](https://github.com/chicodias/pycaret-covid19)
 
 
 ##### Palavras-chave: `python`, `machine learning`, `covid-19`, `modelos de regressão`, `séries temporais`
@@ -26,6 +29,8 @@ Minicurso oferecido através do grupo de extensão PREDICT aos alunos do Bachare
 
 Material do curso: https://predict-icmc.github.io/curso-shiny/
 
+[![predict-icmc/curso-shiny - GitHub](https://gh-card.dev/repos/predict-icmc/curso-shiny.svg)](https://github.com/predict-icmc/curso-shiny)
+
 
 ##### Palavras-chave: `R`, `shiny`, `covid-19`, `visualização de dados`, `geolocalização`
 
@@ -39,5 +44,7 @@ Palestra sobre modelos de nascimento e morte em Processos Estocásticos, que exp
 
 
 ##### Palavras-chave: `R`, `processos estocásticos`, `processos de nascimento e morte`, `modelos de dispersão aleatória`, `cadeias de Markov`
+
+[![chicodias/ants - GitHub](https://gh-card.dev/repos/chicodias/ants.svg)](https://github.com/chicodias/ants)
 
 ***
