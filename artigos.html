@@ -1,364 +1,281 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="pt-BR" data-theme="light">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing &amp; Publications — Francisco Miranda</title>
+  <meta name="description" content="Scientific articles, publications, and technical reports by Francisco Miranda — DeFi, statistics, cryptography, and computing." />
+  <meta name="author" content="Francisco Rosa Dias de Miranda" />
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-
-
-<title>Artigos</title>
-
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-
-
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
-<body>
-
-
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Francisco Miranda</a>
+<body class="page-writing">
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Página inicial de Francisco Miranda"><span class="brand-prompt">Francisco Miranda</span></a>
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">About</a></li>
+          <li><a href="repos.html" class="nav-link">Projects</a></li>
+          <li><a href="artigos.html" class="nav-link active" aria-current="page">Writing</a></li>
+          <li><a href="minicursos.html" class="nav-link">Teaching</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Alternar tema" title="Alternar tema">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="menu-toggle" class="btn-icon menu-toggle" aria-label="Alternar navegação" aria-controls="mobile-nav" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      </div>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Sobre mim</a>
-</li>
-<li>
-  <a href="repos.html">Projetos</a>
-</li>
-<li>
-  <a href="artigos.html">Artigos</a>
-</li>
-<li>
-  <a href="minicursos.html">Minicursos/Palestras</a>
-</li>
+    <div id="mobile-nav" class="mobile-nav">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="repos.html">Projects</a></li>
+        <li><a href="artigos.html" class="active" aria-current="page">Writing</a></li>
+        <li><a href="minicursos.html">Teaching</a></li>
+        <li><a href="https://github.com/chicodias" target="_blank" rel="noopener">GitHub ↗</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <header class="page-intro">
+        <p class="eyebrow">Pesquisa · ensaios · relatórios</p>
+        <h1 class="page-title">Publicações &amp; escrita</h1>
+        <p class="page-summary">Trabalhos sobre DeFi, estatística, saúde pública, fundamentos da matemática e métodos numéricos.</p>
+      </header>
+
+      <!-- Peer-Reviewed & Symposium Publications -->
+      <section class="section-block">
+        <div class="section-titlebar">
+          <h2 class="section-heading">Publicações</h2>
+          <span class="section-meta-tag">Periódicos &amp; anais</span>
+        </div>
+
+        <!-- DeFi Microservices Paper (Revista E&S 2026) -->
+        <article class="item-card">
+          <div class="item-header">
+            <div>
+              <h2 class="item-title">Microservices Communication for Liquidity Monitoring in DeFi Protocols</h2>
+              <p class="item-subtitle">Revista E&amp;S, 2026</p>
+            </div>
+            <span class="item-date">2026</span>
+          </div>
+          <div class="item-body">
+            <p>Revista E&amp;S, 2026. DOI 10.22167/2675-6528-202600822.</p>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="https://doi.org/10.22167/2675-6528-202600822" target="_blank" rel="noopener" class="btn btn-secondary">
+              DOI: 10.22167/2675-6528-202600822 ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- SINAPE 2022 Paper (USP Repository) -->
+        <article class="item-card">
+          <div class="item-header">
+            <div>
+              <h2 class="item-title">Análise de risco e modelos de classificação para óbitos por COVID-19 no estado de São Paulo</h2>
+              <p class="item-subtitle">SINAPE 2022 · Anais da ABE</p>
+            </div>
+            <span class="item-date">2022</span>
+          </div>
+          <div class="item-body">
+            <p class="citation">MIRANDA, Francisco Rosa Dias de et al. Análise de risco e modelos de classificação para óbitos por COVID-19 no estado de São Paulo. 2022, Anais.. ABE: São Paulo, 2022. Disponível em: https://sinape2022.eventize.com.br. Acesso em: 10 out. 2026.</p>
+            <p>Registro no Repositório da Produção USP.</p>
+          </div>
+          <div class="tags-row">
+            <span class="tech-tag accent">SINAPE 2022</span>
+            <span class="tech-tag accent">Classificação de Risco</span>
+            <span class="tech-tag">COVID-19</span>
+            <span class="tech-tag">ABE</span>
+          </div>
+          <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="https://repositorio.usp.br/directbitstream/b98e5a47-0260-4a9e-ac48-c52c0892c7f8/3160905.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+              PDF Direto (Repositório USP) ↗
+            </a>
+            <a href="https://repositorio.usp.br/item/003160905" target="_blank" rel="noopener" class="btn btn-secondary">
+              Registro USP (item/003160905) ↗
+            </a>
+            <a href="https://sinape2022.eventize.com.br" target="_blank" rel="noopener" class="btn btn-secondary">
+              Anais SINAPE 2022 ↗
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Inferência Bayesiana -->
+      <section class="section-block">
+        <div class="section-titlebar">
+          <h2 class="section-heading">Inferência Bayesiana</h2>
+          <span class="section-meta-tag">ICMC-USP</span>
+        </div>
+
+        <article class="item-card">
+          <div class="item-header">
+            <div>
+              <h2 class="item-title">Regressão Linear e Seleção de Variáveis em Alta Dimensionalidade</h2>
+              <p class="item-subtitle">Instituto de Ciências Matemáticas e de Computação (ICMC-USP)</p>
+            </div>
+            <span class="item-date">2021</span>
+          </div>
+          <div class="item-body">
+            <p>
+              Neste relatório, apresentamos brevemente algumas técnicas de caracterização molecular de alta escala, para inferir a estrutura latente de expressões gênicas de acordo com polimorfismos de nucleotídeo único (SNPs), utilizando Modelos Hierárquicos de Regressão não-relacionada aparentemente esparsa (SSUR).
+            </p>
+
+            <!-- Original Graph Illustration -->
+            <div class="article-illustration">
+              <img src="grafo.png" alt="Grafo de modelo hierárquico bayesiano" loading="lazy" decoding="async" />
+              <div class="illustration-caption">
+                Figura: Grafo de dependência molecular em alta dimensionalidade (SSUR)
+              </div>
+            </div>
+          </div>
+          <div class="tags-row">
+            <span class="tech-tag accent">Inferência Bayesiana</span>
+            <span class="tech-tag accent">SSUR</span>
+            <span class="tech-tag">Alta Dimensionalidade</span>
+            <span class="tech-tag">R</span>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="https://github.com/chicodias/21-02/raw/main/SME0809-Bayesiana/MultReg_bayes/relatorio.pdf" target="_blank" class="btn btn-secondary">
+              Relatório em PDF ↗
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- COVID-19 & Análise Epidemiológica (Embedded Video) -->
+      <section class="section-block">
+        <div class="section-titlebar">
+          <h2 class="section-heading">COVID-19</h2>
+          <span class="section-meta-tag">PREDICT · SIICUSP</span>
+        </div>
+
+        <article class="item-card">
+          <div class="item-header">
+            <div>
+              <h2 class="item-title">Visualização dos Impactos Sociais da COVID-19</h2>
+              <p class="item-subtitle">29º SIICUSP · USP</p>
+            </div>
+            <span class="item-date">2021</span>
+          </div>
+          <div class="item-body">
+            <p>
+              Apresentação de parte dos trabalhos desenvolvidos em 2020 pelo grupo de extensão PREDICT no 29º Simpósio Internacional de Iniciação Científica e Tecnológica da USP – SIICUSP 2021.
+            </p>
+
+            <!-- Embedded Video Player -->
+            <div class="video-wrapper">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/E-VLVbHkfPY" title="Visualização dos Impactos Sociais da COVID-19" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="tags-row">
+            <span class="tech-tag accent">COVID-19</span>
+            <span class="tech-tag accent">PREDICT</span>
+            <span class="tech-tag">SIICUSP</span>
+          </div>
+          <div style="margin-top: 14px;"><a href="https://www.youtube.com/watch?v=E-VLVbHkfPY" target="_blank" rel="noopener" class="btn btn-secondary">Assistir no YouTube ↗</a></div>
+        </article>
+      </section>
+
+      <!-- História da Matemática -->
+      <section class="section-block">
+        <div class="section-titlebar">
+          <h2 class="section-heading">História da matemática</h2>
+          <span class="section-meta-tag">USP</span>
+        </div>
+
+        <article class="item-card">
+          <div class="item-header">
+            <div>
+              <h2 class="item-title">O Paradoxo de Russell e sua quebra de paradigma em Teoria dos Conjuntos</h2>
+              <p class="item-subtitle">Departamento de Matemática — Universidade de São Paulo (USP)</p>
+            </div>
+            <span class="item-date">2020</span>
+          </div>
+          <div class="item-body">
+            <p>
+              Este artigo, escrito no primeiro semestre de 2020, apresenta um panorama histórico sobre a gênese da Teoria dos Conjuntos, analisando as quebras de paradigma que esta causou na matemática, assim como suas implicações na axiomatização desenvolvida posteriormente por sistemas como ZFC e Teoria das Categorias.
+            </p>
+          </div>
+          <div class="tags-row">
+            <span class="tech-tag accent">Teoria dos Conjuntos</span>
+            <span class="tech-tag">Paradoxo de Russell</span>
+            <span class="tech-tag">ZFC</span>
+            <span class="tech-tag">Teoria das Categorias</span>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="https://github.com/chicodias/20-01/raw/master/SMA0805%20LAB%20MAT/SMA0805-TRABALHO1.pdf" target="_blank" class="btn btn-secondary">
+              Artigo em PDF ↗
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Métodos Computacionais em Cálculo Numérico (Original IME-USP) -->
+      <section class="section-block">
+        <div class="section-titlebar">
+          <h2 class="section-heading">Cálculo numérico</h2>
+          <span class="section-meta-tag">IME-USP</span>
+        </div>
+
+        <article class="item-card">
+          <div class="item-header">
+            <div>
+              <h2 class="item-title">Soluções de Equações Polinomiais - História e Métodos Numéricos em R</h2>
+              <p class="item-subtitle">Laboratório de Matemática Aplicada — IME-USP (2016)</p>
+            </div>
+            <span class="item-date">2016</span>
+          </div>
+          <div class="item-body">
+            <p>
+              Este trabalho foi realizado no segundo semestre de 2016 para a disciplina Laboratório de Matemática Aplicada, no IME-USP. Nele, apresentamos um breve panorama de como podemos calcular soluções numéricas de equações polinomiais através dos Métodos de Newton e Secante, utilizando os pacotes do R pracma e spuRs.
+            </p>
+
+            <!-- Original Graph Illustration -->
+            <div class="article-illustration">
+              <img src="graf2.png" alt="Método de Newton para obtenção da raíz" loading="lazy" decoding="async" />
+              <div class="illustration-caption">
+                Figura: Gráfico que ilustra a obtenção da raíz de uma equação polinomial através do Método de Newton
+              </div>
+            </div>
+          </div>
+          <div class="tags-row">
+            <span class="tech-tag accent">Método de Newton</span>
+            <span class="tech-tag accent">Método da Secante</span>
+            <span class="tech-tag">R (pracma, spuRs)</span>
+            <span class="tech-tag">IME-USP</span>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="https://github.com/chicodias/newton/raw/master/RP3%20-%20FRANCISCO%20E%20JULIA.pdf" target="_blank" class="btn btn-secondary">
+              Relatório em PDF ↗
+            </a>
+          </div>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Francisco Miranda</span>
+      <ul class="footer-nav">
+        <li><a href="index.html">About</a></li>
+        <li><a href="repos.html">Projects</a></li>
+        <li><a href="minicursos.html">Teaching</a></li>
       </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+    </div>
+  </footer>
 
-<div id="header">
-
-
-
-<h1 class="title toc-ignore">Artigos</h1>
-
-</div>
-
-
-<hr />
-<div id="inferência-bayesiana" class="section level1">
-<h1>Inferência Bayesiana</h1>
-<div id="regressão-linear-e-seleção-de-variáveis-em-alta-dimensionalidade" class="section level3">
-<h3>Regressão Linear e Seleção de Variáveis em Alta Dimensionalidade</h3>
-<p><img src="grafo.png" /></p>
-<p>Neste relatório, apresentamos brevemente algumas técnicas de caracterização molecular de alta escala, para inferir a estrutura latente de expressões gênicas de acordo com polimorfismos de nucleotídeo único (SNPs), utilizando Modelos Hierárquicos de Regressão não-relacionada aparentemente esparsa (SSUR).</p>
-<p><a href="https://github.com/chicodias/21-02/raw/main/SME0809-Bayesiana/MultReg_bayes/relatorio.pdf" class="uri">https://github.com/chicodias/21-02/raw/main/SME0809-Bayesiana/MultReg_bayes/relatorio.pdf</a></p>
-<hr />
-</div>
-</div>
-<div id="covid-19" class="section level1">
-<h1>COVID-19</h1>
-<div id="visualização-dos-impactos-sociais-da-covid-19" class="section level3">
-<h3>Visualização dos Impactos Sociais da COVID-19</h3>
-<p>Apresentação de parte dos trabalhos desenvolvidos em 2020 pelo grupo de extensão PREDICT no 29º Simpósio Internacional de Iniciação Científica e Tecnológica da USP – SIICUSP 2021.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E-VLVbHkfPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
-<hr />
-</div>
-</div>
-<div id="história-da-matemática" class="section level1">
-<h1>História da Matemática</h1>
-<div id="o-paradoxo-de-russell-e-sua-quebra-de-paradigma-em-teoria-dos-conjuntos" class="section level3">
-<h3>O Paradoxo de Russell e sua quebra de paradigma em Teoria dos Conjuntos</h3>
-<p>Este artigo, escrito no primeiro semestre de 2020, apresenta um panorama histórico sobre a gênese da Teoria dos Conjuntos, analisando as quebras de paradigma que esta causou na matemática, assim como suas implicações na axiomatização desenvolvida posteriormente por sistemas como ZFC e Teoria das Catetegorias.</p>
-<p><a href="https://github.com/chicodias/20-01/raw/master/SMA0805%20LAB%20MAT/SMA0805-TRABALHO1.pdf" class="uri">https://github.com/chicodias/20-01/raw/master/SMA0805%20LAB%20MAT/SMA0805-TRABALHO1.pdf</a></p>
-<hr />
-</div>
-</div>
-<div id="métodos-computacionais-em-cálculo-numérico" class="section level1">
-<h1>Métodos Computacionais em Cálculo Numérico</h1>
-<div id="soluções-de-equações-polinomiais---história-e-métodos-numéricos-em-r" class="section level3">
-<h3>Soluções de Equações Polinomiais - História e Métodos Numéricos em R</h3>
-<p>Este trabalho foi realizado no segundo semestre de 2016 para a disciplina Laboratório de Matemática Aplicada, no IME-USP</p>
-<p>Nele, apresentamos um preve panorama de como podemos calcular soluções númericas de equações polinomiais através dos Métodos de Newton e Secante, utilizando os pacotes do R <em>pracma</em> e <em>spuRs</em>.</p>
-<p><a href="https://github.com/chicodias/newton/raw/master/RP3%20-%20FRANCISCO%20E%20JULIA.pdf" class="uri">https://github.com/chicodias/newton/raw/master/RP3%20-%20FRANCISCO%20E%20JULIA.pdf</a></p>
-<div class="figure">
-<img src="graf2.png" alt="" />
-<p class="caption">Gráfico que ilustra a obtenção da raíz de uma equação polinomial através do Método de Newton</p>
-</div>
-<hr />
-</div>
-</div>
-
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
