@@ -1,389 +1,367 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en" data-theme="light">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Francisco Miranda</title>
+  <meta name="description" content="Projects and protocols developed by Francisco Miranda — Web3, smart contracts, AI, and systems engineering." />
+  <meta name="author" content="Francisco Rosa Dias de Miranda" />
 
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-
-
-<title>Some cool projects</title>
-
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-
-
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-<style type="text/css">
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #adb5bd;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script type="text/javascript">
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-
-  // Navbar adjustments
-  var navHeight = $(".navbar").first().height() + 15;
-  var style = document.createElement('style');
-  var pt = "padding-top: " + navHeight + "px; ";
-  var mt = "margin-top: -" + navHeight + "px; ";
-  var css = "";
-  // offset scroll position for anchor links (for fixed navbar)
-  for (var i = 1; i <= 6; i++) {
-    css += ".section h" + i + "{ " + pt + mt + "}\n";
-  }
-  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
-  document.head.appendChild(style);
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
-<body>
-
-
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">Francisco Miranda</a>
+<body class="page-projects">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="Francisco Miranda home"><span class="brand-prompt">Francisco Miranda</span></a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">About</a></li>
+          <li><a href="repos.html" class="nav-link active" aria-current="page">Projects</a></li>
+          <li><a href="artigos.html" class="nav-link">Writing</a></li>
+          <li><a href="minicursos.html" class="nav-link">Teaching</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle color theme" title="Toggle color theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72 1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="menu-toggle" class="btn-icon menu-toggle" aria-label="Toggle navigation" aria-controls="mobile-nav" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="index.html">Sobre mim</a>
-</li>
-<li>
-  <a href="repos.html">Projetos</a>
-</li>
-<li>
-  <a href="artigos.html">Artigos</a>
-</li>
-<li>
-  <a href="minicursos.html">Minicursos/Palestras</a>
-</li>
+    <div id="mobile-nav" class="mobile-nav">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="repos.html" class="active" aria-current="page">Projects</a></li>
+        <li><a href="artigos.html">Writing</a></li>
+        <li><a href="minicursos.html">Teaching</a></li>
+        <li><a href="https://mindsend.xyz" target="_blank" rel="noopener">Mindsend Datatech ↗</a></li>
+        <li><a href="https://github.com/chicodias" target="_blank" rel="noopener">GitHub ↗</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <header class="page-intro">
+        <p class="eyebrow">Selected work · 2020—2026</p>
+        <h1 class="page-title">Projects</h1>
+        <p class="page-summary">Protocol engineering, privacy tools, data products, and small programs built to understand how things work.</p>
+      </header>
+
+      <!-- Web3 & Crypto Protocols -->
+      <section class="section-block">
+        <div class="section-titlebar">
+          <h2 class="section-heading">Crypto &amp; protocols</h2>
+          <span class="section-meta-tag">Smart contracts · wallets · infrastructure</span>
+        </div>
+
+        <div class="project-showcase-grid">
+          <!-- Kadena Cabinet -->
+          <article class="showcase-card">
+            <img src="img/projects/cabinet.png" alt="Kadena Cabinet protocol screenshot" class="showcase-card-img" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Governance · Kadena</span>
+              <h2 class="showcase-title">Kadena Cabinet</h2>
+              <p class="showcase-desc">A governance incentive protocol for the Kadena ecosystem. Built with Pact, TypeScript, and C#.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">Pact</span>
+                <span class="tech-tag accent">TypeScript</span>
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Kadena</span>
+              </div>
+              <div class="showcase-actions">
+                <a href="https://mindsend.xyz" target="_blank" rel="noopener" class="action-link">
+                  Mindsend ↗
+                </a>
+                <a href="https://docs.mindsend.xyz" target="_blank" rel="noopener" class="action-link">
+                  Docs ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- SagaIndexer -->
+          <article id="sagaindexer" class="showcase-card">
+            <img src="img/projects/sagaindexer.png" alt="SagaIndexer architecture and monitoring dashboards" class="showcase-card-img is-diagram" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Indexing · Ethereum</span>
+              <h2 class="showcase-title">SagaIndexer</h2>
+              <p class="showcase-desc">A high-performance, event-driven microservices system for monitoring Uniswap V3 concentrated-liquidity pools, with Saga orchestration, circuit breakers, checkpointed indexing, and gRPC services.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">Go</span>
+                <span class="tech-tag accent">gRPC</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Ethereum</span>
+                <span class="tech-tag">Microservices</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Arcade Prediction Market -->
+          <article class="showcase-card">
+            <img src="img/projects/arcade.png" alt="Arcade Prediction Market UI" class="showcase-card-img" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Prediction markets · Arc</span>
+              <h2 class="showcase-title">Arcade</h2>
+              <p class="showcase-desc">A prediction-market proof of concept for Arc Testnet, using CPMM liquidity and USDC collateral.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">Solidity</span>
+                <span class="tech-tag accent">Foundry</span>
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">Circle L1</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- snaK (MetaMask Snap) -->
+          <article class="showcase-card">
+            <img src="img/projects/snak.png" alt="snaK MetaMask Snap" class="showcase-card-img" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Wallets · Kadena</span>
+              <h2 class="showcase-title">snaK</h2>
+              <p class="showcase-desc">A MetaMask Snap for managing Kadena accounts, transferring tokens across Chainweb, switching networks, and connecting to Kadena applications.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">TypeScript</span>
+                <span class="tech-tag accent">MetaMask Snaps</span>
+                <span class="tech-tag">Kadena</span>
+              </div>
+              <div class="showcase-actions">
+                <a href="https://docs.mindsend.xyz/architecture" target="_blank" rel="noopener" class="action-link">
+                  Docs ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Solana Stealth -->
+          <article class="showcase-card">
+            <img src="img/projects/stealth.png" alt="Solana Stealth protocol diagram" class="showcase-card-img" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Privacy · Solana</span>
+              <h2 class="showcase-title">Solana Stealth</h2>
+              <p class="showcase-desc">An implementation of stealth addresses for private payments on Solana.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">Rust</span>
+                <span class="tech-tag accent">Solana</span>
+                <span class="tech-tag">Zero-Knowledge</span>
+              </div>
+              <div class="showcase-actions">
+                <a href="https://github.com/mindsend-datatech/solana-stealth" target="_blank" rel="noopener" class="action-link">
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- eckoDEX Multiplier -->
+          <article class="showcase-card">
+            <img src="img/projects/dex.png" alt="eckoDEX Multiplier stochastic curves" class="showcase-card-img" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Liquidity · Kadena</span>
+              <h2 class="showcase-title">eckoDEX Algorithmic Multiplier</h2>
+              <p class="showcase-desc">A dynamic liquidity-mining multiplier explored through Brownian-motion simulations and sigmoid tuning.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">Pact</span>
+                <span class="tech-tag accent">Python</span>
+                <span class="tech-tag">Stochastic Modeling</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- AI, Data Science & Systems -->
+      <section class="section-block">
+        <div class="section-titlebar">
+          <h2 class="section-heading">Data &amp; systems</h2>
+          <span class="section-meta-tag">Machine learning · visualization · C</span>
+        </div>
+
+        <div class="project-showcase-grid">
+          <!-- COVID-19 Platform -->
+          <article class="showcase-card">
+            <img src="vac-map.png" alt="COVID-19 Geospatial analysis dashboard" class="showcase-card-img" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Visualization · R</span>
+              <h2 class="showcase-title">COVID-19 interactive dashboard</h2>
+              <p class="showcase-desc">An R Shiny application developed with PREDICT using geolocated data, time-series regression, and data visualization.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">R</span>
+                <span class="tech-tag accent">Shiny</span>
+                <span class="tech-tag">Time series</span>
+              </div>
+              <div class="showcase-actions">
+                <a href="https://github.com/predict-icmc/covid-shiny" target="_blank" rel="noopener" class="action-link">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-card">
+            <img src="https://github.com/chicodias/covid-map/raw/main/estados.gif" alt="Animated map of COVID-19 deaths in Brazil" class="showcase-card-img" loading="lazy" decoding="async">
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Maps · R</span>
+              <h2 class="showcase-title">Animated COVID-19 maps</h2>
+              <p class="showcase-desc">Animated visualization of the moving average of COVID-19 deaths across Brazilian states and municipalities.</p>
+              <div class="tags-row"><span class="tech-tag">R</span><span class="tech-tag">Geospatial data</span></div>
+              <div class="showcase-actions"><a href="https://github.com/chicodias/covid-map" target="_blank" rel="noopener" class="action-link">GitHub ↗</a></div>
+            </div>
+          </article>
+
+          <!-- Character Network NER -->
+          <article class="showcase-card">
+            <img src="https://raw.githubusercontent.com/chicodias/character-network/master/grafo-s.png" alt="Lord of the Rings character network" class="showcase-card-img" loading="lazy" decoding="async">
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">NLP · networks</span>
+              <h2 class="showcase-title">Lord of the Rings character network</h2>
+              <p class="showcase-desc">An interactive view of character relationships built with named-entity recognition.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">Python</span>
+                <span class="tech-tag accent">NLP / NER</span>
+                <span class="tech-tag">NetworkX</span>
+              </div>
+              <div class="showcase-actions">
+                <a href="https://github.com/chicodias/character-network" target="_blank" rel="noopener" class="action-link">
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Titanic Decision Boundaries -->
+          <article class="showcase-card">
+            <img src="decision.png" alt="Classifier decision boundaries" class="showcase-card-img" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Classification · Python</span>
+              <h2 class="showcase-title">Titanic</h2>
+              <p class="showcase-desc">A Kaggle notebook classifying passenger survival from the supplied passenger data.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">Python</span>
+                <span class="tech-tag accent">Scikit-Learn</span>
+                <span class="tech-tag">ML</span>
+              </div>
+              <div class="showcase-actions">
+                <a href="https://github.com/chicodias/titanicKaggle" target="_blank" rel="noopener" class="action-link">
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mandelbrot Engine -->
+          <article class="showcase-card">
+            <img src="mandel.png" alt="Mandelbrot fractal in C" class="showcase-card-img" loading="lazy" decoding="async" />
+            <div class="showcase-card-body">
+              <span class="showcase-cat-badge">Graphics · C</span>
+              <h2 class="showcase-title">Mandelbrot fractal</h2>
+              <p class="showcase-desc">A C program that computes the Mandelbrot set and writes the rendered image in PPM format.</p>
+              <div class="tags-row">
+                <span class="tech-tag accent">C</span>
+                <span class="tech-tag">Fractais</span>
+                <span class="tech-tag">PPM</span>
+              </div>
+              <div class="showcase-actions">
+                <a href="mandel.c" target="_blank" class="action-link">
+                  Source (mandel.c) ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Additional Open Source & Algorithms (C / R) -->
+      <section class="section-block">
+        <div class="section-titlebar">
+          <h2 class="section-heading">Packages &amp; algorithms</h2>
+          <span class="section-meta-tag">Open source</span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+          <!-- gather.covid -->
+          <article class="item-card" style="margin-bottom: 0;">
+            <div class="item-header">
+              <h3 class="item-title" style="font-size: 1rem;"><code>gather.covid</code></h3>
+              <span class="item-date">R package</span>
+            </div>
+            <p class="item-body" style="font-size: 0.88rem;">
+              Pacote do R desenvolvido para obtenção, higienização e padronização automatizada de dados epidemiológicos da COVID-19.
+            </p>
+            <div class="tags-row">
+              <span class="tech-tag accent">R</span>
+              <span class="tech-tag">R package</span>
+              <span class="tech-tag">ETL</span>
+            </div>
+            <div style="margin-top: 12px;">
+              <a href="https://github.com/predict-icmc/gather-data" target="_blank" rel="noopener" class="action-link">
+                GitHub (gather-data) ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- AVL Dictionary in C -->
+          <article class="item-card" style="margin-bottom: 0;">
+            <div class="item-header">
+              <h3 class="item-title" style="font-size: 1rem;">Dicionário em Árvore AVL</h3>
+              <span class="item-date">C &bull; Data Structures</span>
+            </div>
+            <p class="item-body" style="font-size: 0.88rem;">
+              Implementação em C de dicionário indexado utilizando Árvore AVL auto-balanceável, rotações de balanceamento e complexidade logarítmica O(log n).
+            </p>
+            <div class="tags-row">
+              <span class="tech-tag accent">C</span>
+              <span class="tech-tag">Árvore AVL</span>
+              <span class="tech-tag">Estruturas de Dados</span>
+            </div>
+            <div style="margin-top: 12px;">
+              <a href="https://github.com/chicodias/avl-dictionary" target="_blank" rel="noopener" class="action-link">
+                GitHub (avl-dictionary) ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Convex Hull in C -->
+          <article class="item-card" style="margin-bottom: 0;">
+            <div class="item-header">
+              <h3 class="item-title" style="font-size: 1rem;">Fecho Convexo (Convex Hull)</h3>
+              <span class="item-date">C &bull; Geometric Algorithms</span>
+            </div>
+            <p class="item-body" style="font-size: 0.88rem;">
+              Algoritmo de geometria computacional implementado em C para cálculo do envoltório convexo de conjuntos de pontos no plano euclidiano.
+            </p>
+            <div class="tags-row">
+              <span class="tech-tag accent">C</span>
+              <span class="tech-tag">Geometria Computacional</span>
+              <span class="tech-tag">Algoritmos</span>
+            </div>
+            <div style="margin-top: 12px;">
+              <a href="https://github.com/chicodias/convexhull-c" target="_blank" rel="noopener" class="action-link">
+                GitHub (convexhull-c) ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Francisco Miranda</span>
+      <ul class="footer-nav">
+        <li><a href="index.html">About</a></li>
+        <li><a href="artigos.html">Writing</a></li>
+        <li><a href="minicursos.html">Teaching</a></li>
       </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
+    </div>
+  </footer>
 
-<div id="header">
-
-
-
-<h1 class="title toc-ignore">Some cool projects</h1>
-
-</div>
-
-
-<hr />
-<div id="python" class="section level1">
-<h1>Python</h1>
-<div id="classificação" class="section level2">
-<h2>Classificação</h2>
-<div id="titanic" class="section level3">
-<h3>Titanic</h3>
-<p>Notebook da competição do Kaggle que utiliza o conjunto de dados contendo informações dos passageiros do Titanic. O objetivo é classificar se determinado passageiro veio a óbito ou não, utilizando as informações fornecidas.</p>
-<div class="figure">
-<img src="decision.png" alt="" />
-<p class="caption">Regiões de decisão a partir de diferentes modelos</p>
-</div>
-<p><a href="https://github.com/chicodias/titanicKaggle"><img src="https://gh-card.dev/repos/chicodias/titanicKaggle.svg" alt="chicodias/titanicKaggle - GitHub" /></a></p>
-<hr />
-</div>
-</div>
-<div id="nlp" class="section level2">
-<h2>NLP</h2>
-<div id="rede-de-personagens-da-trilogia-o-senhor-dos-anéis" class="section level3">
-<h3>Rede de personagens da trilogia O Senhor dos Anéis</h3>
-<p><img src="https://raw.githubusercontent.com/chicodias/character-network/master/grafo-s.png" /></p>
-<p>Neste trabalho, geramos um dashboard de visualização interativa para as relações entre os personagens utilizando o modelo de Reconhecimento de Entidade Mencionada (NER).</p>
-<p><a href="https://github.com/chicodias/character-network"><img src="https://gh-card.dev/repos/chicodias/character-network.svg" alt="chicodias/character-network - GitHub" /></a></p>
-<hr />
-</div>
-</div>
-<div id="r" class="section level2">
-<h2>R</h2>
-<div id="dashboard-interativo-do-covid-19" class="section level3">
-<h3>Dashboard interativo do COVID-19</h3>
-<p><img src="https://github.com/predict-icmc/presentations/raw/master/siicusp/img/mapa-intera.png" /></p>
-<p>Aplicação web em R shiny desenvolvida no âmbito do grupo de extensão PREDICT. Aqui, tive a oportunidade de trabalhar com dados geolocalizados, modelos de regressão em séries temporais e ferramentas de visualização computacional.</p>
-<p><a href="https://github.com/predict-icmc/covid-shiny"><img src="https://gh-card.dev/repos/predict-icmc/covid-shiny.svg" alt="predict-icmc/covid-shiny - GitHub" /></a></p>
-<hr />
-</div>
-<div id="mapas-animados-do-covid-19" class="section level3">
-<h3>Mapas animados do Covid-19</h3>
-<p>Visualização animada que exibe a evolução da média móvel de óbitos em decorrência do Covid-19 nos estados e municípios brasileiros.</p>
-<p><img src="https://github.com/chicodias/covid-map/raw/main/estados.gif" /></p>
-<p><a href="https://github.com/chicodias/covid-map"><img src="https://gh-card.dev/repos/chicodias/covid-map.svg" alt="chicodias/covid-map - GitHub" /></a></p>
-<hr />
-</div>
-<div id="gather.covid" class="section level3">
-<h3><code>gather.covid</code></h3>
-<p>Pacote do R para obtenção e limpeza de dados do covid-19.</p>
-<p><a href="https://github.com/predict-icmc/gather-data"><img src="https://gh-card.dev/repos/predict-icmc/gather-data.svg" alt="predict-icmc/gather-data - GitHub" /></a></p>
-<hr />
-<hr />
-</div>
-</div>
-</div>
-<div id="c" class="section level1">
-<h1>C</h1>
-<div class="figure">
-<img src="mandel.png" alt="" />
-<p class="caption">Fractal de Mandelbrot</p>
-</div>
-<style>
-  .col2 {
-    columns: 2 200px;         /* number of columns and width in pixels*/
-    -webkit-columns: 2 200px; /* chrome, safari */
-    -moz-columns: 2 200px;    /* firefox */
-  }
- </style>
-<div class="col2">
-<p><a href="https://github.com/chicodias/avl-dictionary"><img src="https://gh-card.dev/repos/chicodias/avl-dictionary.svg" alt="chicodias/avl-dictionary - GitHub" /></a></p>
-<p><a href="https://github.com/chicodias/convexhull-c"><img src="https://gh-card.dev/repos/chicodias/convexhull-c.svg" alt="chicodias/convexhull-c - GitHub" /></a></p>
-</div>
-</div>
-
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
